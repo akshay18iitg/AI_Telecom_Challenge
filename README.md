@@ -60,6 +60,11 @@ It applies a cross-encoder model, which performs pairwise comparisons between th
 I pass the question through retriever and attach the context given by retriver to question. This is then passed to custom prompt generation template.  
 
 
+### Parent Document Retriever
+
+I also implement Parent Document Retriever using Recursive retrieval and Node references in llamaindex. This technique search relevant documents with small chunks and return the original text to the chunk. This text is used a context. The code can be found in Parent_document_retriever.ipynb file. 
+
+
 ## Prompt Generation
 
 I used a Chain of Thought (COT) prompt that includes six crucial steps. These steps direct the Large Language Model (LLM) to focus on key details and then reason by taking those details into account. It looks like:
